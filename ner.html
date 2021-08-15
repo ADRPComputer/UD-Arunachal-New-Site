@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Fav Icon-->
+    <link href="images/fav.ico" rel="icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>NER | Dept. of UD&H</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMW4DKFHDB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GMW4DKFHDB');
+    </script>
+
+</head>
+
+<body>
+    <!--Header Photo-->
+    <div>
+        <img src="images/header2.jpg" width="100%" class="img-fluid">
+    </div>
+
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(9, 102, 145)">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                    <path fill-rule="evenodd"
+                        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+                </svg></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Profile
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="organizational_structure.html">Organizational
+                                    Structure</a></li>
+                            <li><a class="dropdown-item" href="accounts.html">Accounts</a></li>
+                            <li><a class="dropdown-item" href="establishment.html">Establishment</a></li>
+                            <li><a class="dropdown-item" href="motor_vehicle.html">Motor Vehicle</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Schemes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ner.html">10% Lumpsum Provision for the benefit of NER
+                                    i/c
+                                    Sikkim</a></li>
+                            <li><a class="dropdown-item" href="jnnurm.html">Jawaharlal Nehru National Urban Renewal
+                                    Mission
+                                    (JnNURM)</a></li>
+                            <li><a class="dropdown-item" href="ray.html">Rajiv Awas Yojana (RAY)</a></li>
+                            <li><a class="dropdown-item" href="spa.html">Special Plan Allocation (SPA)</a></li>
+                            <li><a class="dropdown-item" href="ada.html">Annual Developement Agenda (ADA)</a></li>
+                            <li><a class="dropdown-item" href="deposit_work.html">Deposit Work</a></li>
+                            <li><a class="dropdown-item" href="nesids.html">North Eastern States Infrastructure
+                                    Developement
+                                    Schemes (NESIDS)</a></li>
+                            <li><a class="dropdown-item" href="nec.html">North Eastern Council (NEC)</a></li>
+                            <li><a class="dropdown-item" href="sidf.html">State Infrastructure Developement Fund
+                                    (SIDF)</a>
+                            </li>
+                            <li><a class="dropdown-item" href="daynulm.html">Deendayal Antyodaya Yojana - National Urban
+                                    Livelihood Mission (DAY-NULM)</a></li>
+                            <li><a class="dropdown-item" href="pmay.html">Pradhan Mantri Awas Yojana - Housing for All
+                                    [Urban]</a></li>
+                            <li><a class="dropdown-item" href="sbm.html">Swachh Bharat Mission [Urban]</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Announcement
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="orders_circulars.html">Orders / Circulars</a></li>
+                            <li><a class="dropdown-item" href="recruitment.html">Recruitment</a></li>
+                            <li><a class="dropdown-item" href="tenders.html">Tenders / EoI</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-success">Dept. of Urban Development & Housing, Arunachal
+                        Pradesh</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    </div>
+
+
+    <!--Feature-->
+    <div class="container my-4" style="min-height: 600px;">
+        <div class="row">
+            <div class="col">
+                <h2>10% Lumpsum Provision for the Benifit of NER i/c Sikkim</h2>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <h5>Completed Projects</h5>
+                <hr class="mt-1">
+                <p style="text-align: justify;">Data not available !</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <h5>Ongoing Projects</h5>
+                <hr class="mt-1">
+                <p style="text-align: justify;">Quarterly Progress Report upto 31-03-2018</p>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td width="5%" rowspan="2" align="center"><strong>SL No.</strong></td>
+                            <td width="18%" rowspan="2" align="center"><strong>Name of Project</strong></td>
+                            <td width="10%" rowspan="2" align="center"><strong>Sanctioned cost of the Project (in
+                                    Lakh)</strong></td>
+                            <td width="8%" rowspan="2" align="center"><strong>Year of Sanction</strong></td>
+                            <td colspan="4" align="center"><strong>Financial Progresses (in Lakh)</strong></td>
+                            <td width="9%" rowspan="2" align="center"><strong>Overall Financial Progress (in
+                                    Lakh)</strong></td>
+                            <td width="9%" rowspan="2" align="center"><strong>Overall Physical Progres (in %)</strong>
+                            </td>
+                            <td width="7%" rowspan="2" align="center"><strong>Details</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="9%" align="center"><strong>Central Share Released</strong></td>
+                            <td width="8%" align="center"><strong>Utilized</strong></td>
+                            <td width="9%" align="center"><strong>State Share Released</strong></td>
+                            <td width="8%" align="center"><strong>Utilized</strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>1</strong></td>
+                            <td align="left" valign="middle" style="text-align: left">
+                                <p><strong>Implementation of Solid waste Management at Daporijo township</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>597.68</strong></td>
+                            <td align="center" valign="middle" style="text-align: left">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left">
+                                <p><strong>376.53</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>376.53</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>59.77</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>59.77</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>436.30</strong></td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>60%</strong></td>
+                            <td align="center" valign="middle"><strong><a href="docs/schemes/MoHUA/1.pdf"
+                                        target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                        </svg></a></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>2</strong></td>
+                            <td align="left" valign="middle" style="text-align: left">
+                                <p><strong>Construction/Improvement of Road Network at Seppa</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: center">
+                                <p><strong>1869.67</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left">
+                                <p><strong>1682.71</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>1177.89</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>186.97</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>186.97</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>1364.86</strong></td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>98%</strong></td>
+                            <td align="center" valign="middle"><strong><a href="docs/schemes/MoHUA/2.pdf"
+                                        target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                        </svg></a></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>3</strong></td>
+                            <td align="left" valign="middle" style="text-align: left">
+                                <p><strong>Improvement of Road Network at Anini</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: center">
+                                <p><strong>2676.22</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>2012-13</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>2408.60</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>1686.02</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>267.62</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>267.62</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>1953.64</strong></td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>85%</strong></td>
+                            <td align="center" valign="middle"><strong><a href="docs/schemes/MoHUA/3.pdf"
+                                        target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                        </svg></a></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>4</strong></td>
+                            <td align="left" valign="middle" style="text-align: left">
+                                <p><strong>Construction of Burial-cum-Cremation Ground at Anini</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: center">
+                                <p><strong>463.72</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>417.35</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>292.14</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>46.37</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>46.37</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>338.51</strong></td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>82%</strong></td>
+                            <td align="center" valign="middle"><strong><a href="docs/schemes/MoHUA/4.pdf"
+                                        target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                        </svg></a></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>5</strong></td>
+                            <td align="left" valign="middle" style="text-align: left">
+                                <p><strong>Construction of Burial-cum-Cremation Ground at Palin </strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>993.79</strong></td>
+                            <td align="center" valign="middle" style="text-align: left">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>894.41</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>894.41</strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>99.38 </strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>99.38 </strong></td>
+                            <td align="center" valign="middle" style="text-align: left"><strong>993.79</strong></td>
+                            <td align="center" valign="middle" style="text-align: center"><strong>91%</strong></td>
+                            <td align="center" valign="middle"><strong><a href="docs/schemes/MoHUA/5.pdf"
+                                        target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                        </svg></a></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>6</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>Construction of Burial-cum-Cremation Ground at Hawai</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>445.09</strong></td>
+                            <td align="center" valign="middle">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>280.37</strong></td>
+                            <td align="center" valign="middle"><strong>280.37</strong></td>
+                            <td align="center" valign="middle"><strong>44.51</strong></td>
+                            <td align="center" valign="middle"><strong>44.51</strong></td>
+                            <td align="center" valign="middle"><strong>324.88</strong></td>
+                            <td align="center" valign="middle"><strong>80%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/6.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>7</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>Construction of CC Road with side drain within Dumporijo.</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>1252.31</strong></td>
+                            <td align="center" valign="middle"><strong>2014-15</strong></td>
+                            <td align="center" valign="middle"><strong>788.95</strong></td>
+                            <td align="center" valign="middle"><strong>338.12</strong></td>
+                            <td align="center" valign="middle"><strong>84.36</strong></td>
+                            <td align="center" valign="middle"><strong>37.57</strong></td>
+                            <td align="center" valign="middle"><strong>422.48</strong></td>
+                            <td align="center" valign="middle"><strong>92%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/7.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>8</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>Construction of Burial-cum-Cremation Ground at Mariyang </strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>657.32</strong></td>
+                            <td align="center" valign="middle"><strong>2014-15</strong></td>
+                            <td align="center" valign="middle"><strong>414.12</strong></td>
+                            <td align="center" valign="middle"><strong>177.48</strong></td>
+                            <td align="center" valign="middle"><strong>65.73</strong></td>
+                            <td align="center" valign="middle"><strong>19.72</strong></td>
+                            <td align="center" valign="middle"><strong>197.20</strong></td>
+                            <td align="center" valign="middle"><strong>35%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/8.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>9</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>C/o&nbsp; Hostel Building&nbsp; for Working Women, Destitute Children and Old
+                                        Age Urban Dwellers at Yinkiong. </strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>661.64</strong></td>
+                            <td align="center" valign="middle">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>396.98</strong></td>
+                            <td align="center" valign="middle"><strong>396.98</strong></td>
+                            <td align="center" valign="middle"><strong>66.16</strong></td>
+                            <td align="center" valign="middle"><strong>66.16</strong></td>
+                            <td align="center" valign="middle"><strong>463.14</strong></td>
+                            <td align="center" valign="middle"><strong>90%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/9.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>10</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>C/o Vendors Market at Daporijo in AP.</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>904.11</strong></td>
+                            <td align="center" valign="middle">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>536.44</strong></td>
+                            <td align="center" valign="middle"><strong>536.44</strong></td>
+                            <td align="center" valign="middle">
+                                <p><strong>98.24</strong></p>
+                            </td>
+                            <td align="center" valign="middle">
+                                <p><strong>98.24</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>634.68</strong></td>
+                            <td align="center" valign="middle"><strong>95%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/10.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>11</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>C/o Shopping Complex and unemployed women Hostel at Longding. </strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>1168.48</strong></td>
+                            <td align="center" valign="middle">
+                                <p><strong>2013-14</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>701.08 </strong></td>
+                            <td align="center" valign="middle"><strong>701.08 </strong></td>
+                            <td align="center" valign="middle"><strong>116.85</strong></td>
+                            <td align="center" valign="middle"><strong>116.85</strong></td>
+                            <td align="center" valign="middle"><strong>817.93</strong></td>
+                            <td align="center" valign="middle"><strong>91%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/11.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>12</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>Construction of Working and unemployed women Hostel at Dirang.</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>1195.44</strong></td>
+                            <td align="center" valign="middle"><strong>2014-15</strong></td>
+                            <td align="center" valign="middle"><strong>1,065.54 </strong></td>
+                            <td align="center" valign="middle"><strong>1,065.54 </strong></td>
+                            <td align="center" valign="middle">
+                                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 129.88 </strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>129.88 </strong></td>
+                            <td align="center" valign="middle"><strong>1195.42</strong></td>
+                            <td align="center" valign="middle"><strong>95%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/12.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>13</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>Construction of Vendors Market at Dirang&nbsp; in AP.</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>578.76</strong></td>
+                            <td align="center" valign="middle"><strong>2014-15</strong></td>
+                            <td align="center" valign="middle"><strong>515.88 </strong></td>
+                            <td align="center" valign="middle"><strong>515.88 </strong></td>
+                            <td align="center" valign="middle"><strong>62.88</strong></td>
+                            <td align="center" valign="middle"><strong>62.88</strong></td>
+                            <td align="center" valign="middle"><strong>578.76</strong></td>
+                            <td align="center" valign="middle"><strong>98%</strong></td>
+                            <td align="center" valign="middle"><strong><span style="text-align: left"><a
+                                            href="docs/schemes/MoHUA/13.pdf" target="_blank"><svg
+                                                xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                                fill="currentColor" class="bi bi-cloud-arrow-down-fill"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                                            </svg></a></span></strong></td>
+                        </tr>
+                        <tr>
+                            <td align="center" valign="middle"><strong>14</strong></td>
+                            <td align="left" valign="middle">
+                                <p><strong>Construction of Vendor’s Market at Yingkiong</strong></p>
+                            </td>
+                            <td align="center" valign="middle"><strong>1685.9</strong></td>
+                            <td align="center" valign="middle"><strong>2016-17</strong></td>
+                            <td align="center" valign="middle"><strong>486.46</strong></td>
+                            <td align="center" valign="middle">&nbsp;</td>
+                            <td align="center" valign="middle"><strong>75.5</strong></td>
+                            <td align="center" valign="middle">&nbsp;</td>
+                            <td align="center" valign="middle">&nbsp;</td>
+                            <td align="center" valign="middle"></td>
+                            <td align="center" valign="middle"><strong>Tender under process</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center"><strong>Total =</strong></td>
+                            <td align="center">
+                                <p><strong>16823.28</strong></p>
+                            </td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">
+                                <p><strong>12020.43</strong></p>
+                            </td>
+                            <td align="center">
+                                <p><strong>9944.72</strong></p>
+                            </td>
+                            <td align="center">
+                                <p><strong>1571.54</strong></p>
+                            </td>
+                            <td align="center">
+                                <p><strong>1403.24</strong></p>
+                            </td>
+                            <td align="center">
+                                <p><strong>11394.74</strong></p>
+                            </td>
+                            <td align="center">&nbsp;</td>
+                            <td align="center">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <h5>Priority List of Projects</h5>
+                <hr class="mt-1">
+                <p style="text-align: justify;">Data not available !</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Main Footer-->
+    <footer class="container-fluid bg-dark">
+        <div class="container pt-3 pb-2">
+            <p class="float-end"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                        fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+                    </svg></a></p>
+            <p class="text-muted">|| All Rights Reserved || Dept. of Urban Development & Housing, Arunachal Pradesh ||
+                Powered by <a href="https://adrp.in" target="_blank" class="text-decoration-none">ADRP Computer (P) Ltd.
+            </p></a></p>
+        </div>
+
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
